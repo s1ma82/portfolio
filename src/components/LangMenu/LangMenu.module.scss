@@ -1,0 +1,21 @@
+.container{
+	.btn{
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		width: 40px;
+		height: 40px;
+		border: none;
+		border-radius: 10px;
+		background: var(--color-green);
+		color: var(--color-primary);
+		padding: 10px;
+		cursor: pointer;
+		transition: .1s;
+
+		&:hover{
+			font-size: 16px;
+			transition: .1s;
+		}
+	}
+}

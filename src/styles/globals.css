@@ -1,0 +1,67 @@
+@import url('./fonts/fonts.css');
+@import url('./scroll.scss');
+
+
+*{
+    box-sizing: border-box;
+}
+#theme{
+    font-family: var(--font);
+    min-height: 100vh;
+    padding: 15px;
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+html{
+    background: var(--color-primary);
+}
+a{
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    user-select: none;
+}
+ul, ol{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul>li{
+    display: flex;
+    gap: 10px;
+}
+.container{
+    display: flex;
+    padding: 5px;
+}
+.container.column{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.start{
+    align-self: flex-start;
+}
+.end{
+    align-self: flex-end;
+}
+
+.code{
+    display: flex;
+    font-family: var(--font-code);
+}
+
+:root{
+    --font: 'Sofia', sans-serif;
+    --font-code: 'Fira Code', sans-serif;
+    --color-green: #a0ffc3;
+    --color-primary: #292b2f;
+    --color-black: #23272a;
+    --color-white: #dedede;
+    --color-gray: #dededead;
+}

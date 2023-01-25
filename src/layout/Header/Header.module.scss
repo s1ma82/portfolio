@@ -1,0 +1,15 @@
+.header{
+    
+    justify-content: space-between;
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        transition: 1s, hidden 0s 1s;
+        &_active{
+            opacity: 1;
+            visibility: visible;
+            transition: 1s;
+
+        }
+    }
+}
