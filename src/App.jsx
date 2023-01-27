@@ -12,7 +12,7 @@ export default () => {
         ██████╔╝███████╗██║░╚═╝░██║██║░░██║╚█████╔╝███████╗
         ╚═════╝ ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚════╝ ╚══════╝
     `
-    console.log(log)
+    console.log(`%c${log}`, 'color: #a0ffc3')
     return (
         <BrowserRouter>
             <div id="theme" className="light">
