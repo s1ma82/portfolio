@@ -13,7 +13,6 @@
   "dependencies": {
     "@react-three/drei": "^9.52.6",
     "@react-three/fiber": "^8.10.0",
-    "chalk": "^5.2.0",
     "dedent": "^0.7.0",
     "gh-pages": "^5.0.0",
     "highlight.js": "^11.7.0",
