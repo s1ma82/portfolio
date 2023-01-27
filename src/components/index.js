@@ -6,7 +6,9 @@ import Code from './Code'
 import Typed from './Typed'
 import LangMenu from './LangMenu/LangMenu'
 import AboutMe from './AboutMe/AboutMe'
+import Line from './Line/Line'
 export {
+    Line,
     AboutMe,
     LangMenu,
     Canvas,

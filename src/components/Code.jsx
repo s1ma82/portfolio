@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import hljs from "highlight.js/lib/core";
-// import 'highlight.js/styles/monokai-sublime.css'
+import 'highlight.js/styles/monokai-sublime.css'
 
 const genLang = async (name, setModules) => {
     const lang = {} 

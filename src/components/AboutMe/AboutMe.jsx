@@ -1,5 +1,5 @@
-import { Text, Title } from '../'
-import { techs, sites, langs, frameworks, libs, tools } from './data'
+import { Line, Text, Title } from '../'
+import { techs, sites, langs, frameworks, libs, tools, utils } from './data'
 import styles from './AboutMe.module.scss'
 export default ({className}) => {
     
@@ -30,6 +30,14 @@ export default ({className}) => {
                     <Title className={`${styles.title} ${styles.title_sub}`}>Frameworks</Title>
                     <ul className={styles.list}>
                         {frameworks?.map(({icon, name}) => <li key={name}>{icon}{name}</li>)}
+                    </ul>
+                </div>
+                <div className={styles.utils}>
+                    <Title className={`${styles.title} ${styles.title_sub}`}>Utils</Title>
+                    <ul className={styles.list}>
+                        {utils[0]?.map(({ icon, name }) => <li key={name}>{icon}{name}</li>)}
+                        <Line color="var(--color-gray)" />
+                        {utils[1]?.map(i => <li key={i}>{i}</li>)}
                     </ul>
                 </div>
                 <div className={styles.libs}>

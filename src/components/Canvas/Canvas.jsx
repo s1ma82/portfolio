@@ -2,7 +2,6 @@ import { Canvas, useFrame, useLoader} from "@react-three/fiber"
 import {OBJLoader} from 'three/examples/jsm/loaders/OBJLoader'
 import { useRef } from "react"
 import styles from './Canvas.module.scss'
-import { TextureLoader } from "three"
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader"
 import { OrbitControls } from "@react-three/drei"
 
