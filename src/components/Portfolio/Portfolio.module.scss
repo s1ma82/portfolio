@@ -1,0 +1,34 @@
+.portfolio {
+    width: 100%;
+    .works{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        &__item{
+            // box-sizing: content-box;
+            max-width: 560px;
+            background: #202020;
+            border: 5px solid var(--color-green);
+            padding: 15px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .title{
+                font-size: 22px;
+                font-family: var(--font-code);
+                margin: 0;
+                padding: 0;
+
+            }  
+            .descr{
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}

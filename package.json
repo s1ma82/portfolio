@@ -1,12 +1,12 @@
 {
   "name": "s1ma82",
-  "version": "0.1.0",
+  "version": "11.11.11",
   "private": true,
   "type": "module",
   "scripts": {
     "gen": "generate-react component",
     "deploy": "gh-pages -b gh-pages -d build",
-    "dev": "vite --port 3000",
+    "start": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -23,6 +23,7 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^12.1.4",
     "react-router-dom": "^6.7.0",
+    "react-svg": "^16.0.0",
     "redux-toolkit": "^1.1.2",
     "sass": "^1.57.1",
     "three": "^0.148.0",

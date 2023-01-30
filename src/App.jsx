@@ -17,7 +17,7 @@ export default () => {
         <BrowserRouter>
             <div id="theme" className="light">
                 <Header />
-                <main>
+                <main className="layout">
                     <Routes>
                         <Route path="/" element={<Home/>} /> 
                     </Routes>

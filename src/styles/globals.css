@@ -39,6 +39,10 @@ ul>li{
     display: flex;
     padding: 5px;
 }
+.layout{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .container.column{
     flex-direction: column;
     justify-content: center;

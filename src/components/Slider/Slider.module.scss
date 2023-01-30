@@ -1,0 +1,56 @@
+.container {
+    img{
+        width: 100%;
+        cursor: pointer;
+    }
+    .btn{
+        display: none;
+    }
+    &_active{
+        background: rgba(0, 0, 0, 0.514);
+        z-index: 1000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        .slider{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 1200px;
+        .btn{
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            height: 100%;
+            background: transparent;
+            cursor: pointer;
+            border: none;
+            &_prev{
+                left: 0;
+                transform: translate(0, -50%) rotate(180deg);
+            }
+            &_next{
+                right: 0;
+                transform: translate(0, -50%);
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+            svg{
+                fill: #fff;
+            }
+        }
+
+            img{
+            }
+        }
+    }
+}
