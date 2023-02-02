@@ -23,7 +23,7 @@ export default () => {
                     <main className="layout">
                         <Routes>
                             <Route path="/" element={<Home/>} /> 
-                            <Route path="/works/:name" element={<Works/>} /> 
+                            {/* <Route path="/works/:name" element={<Works/>} />  */}
                         </Routes>
                     </main>
                 <ContextMenu/>
