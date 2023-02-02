@@ -20,38 +20,23 @@
     user-select: none;
     height: 40px;
     cursor: pointer;
-    transition: .3s;
     word-wrap: none;
     z-index: 100;
 
-    &.active{
-        animation: logo .5s ease;
-        transition: .3s;
-        
-        .logo__descr{
-            display: block;
-            transform: translate(20px);
-        }
-        &::after{
-            width: calc(100% + 20px);
-            transition: 0s .3s;
-        }
-
-    }
+    
     b{
         color: var(--color-green);
-        transition: .3s;
+        transition: color .3s;
     }
     &__descr{
         display: none;
         margin: 0;
         margin-top: 8px;
-        line-height: 30px;
         font-family: var(--font);
         font-size: 20px;
+        line-height: 30px;
         z-index: 100;
 
-        
     }
     &::after{
         content: '';
@@ -59,11 +44,18 @@
         bottom: -2px;
         left: 0;
         width: 100%;
-        height: 5px;
+        height: 4px;
         background: var(--color-green);
-        transition: all .4s, width .1s ;
+        transition: width .1s .3s ;
     }
+    &.active{
+        animation: logo .5s ease;
+        
+        .logo__descr{
+            display: block;
+        }
 
+    }
     &:hover{
         color: var(--color-green);
         transition: .3s;

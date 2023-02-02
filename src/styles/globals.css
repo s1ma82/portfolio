@@ -13,6 +13,7 @@
     color: var(--color-white);
 }
 html{
+    overflow-x: hidden;
     background: var(--color-primary);
 }
 a{

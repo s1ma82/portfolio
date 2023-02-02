@@ -9,7 +9,12 @@ import AboutMe from './AboutMe/AboutMe'
 import Line from './Line/Line'
 import Portfolio from './Portfolio/Portfolio'
 import Slider from './Slider/Slider'
+import ContextMenu from './ContextMenu/ContextMenu'
+import Context from './Context/Context'
+
 export {
+    Context,
+    ContextMenu, 
     Slider,
     Portfolio,
     Line,

@@ -1,4 +1,5 @@
 .portfolio {
+    margin-top: 100px;
     width: 100%;
     .works{
         display: flex;
@@ -18,6 +19,9 @@
             flex-direction: column;
             width: 100%;
 
+            img{
+                width: 100%;
+            }
             .title{
                 font-size: 22px;
                 font-family: var(--font-code);

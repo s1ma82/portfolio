@@ -2,12 +2,16 @@
 
 .skills{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     padding: 20px;
     border-radius: 5px;
     box-shadow: inset #00000050 0 0 10px 0px;
 
     .title{
         display: inline-block;
+        width: fit-content;
         font-size: 1.5em;
         color: var(--color-gray);
         padding: 0;
@@ -33,8 +37,9 @@
     }
     &__item{
         display: flex;
+        row-gap: 30px;
         column-gap: 100px;
-        // justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
 
         
