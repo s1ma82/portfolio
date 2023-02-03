@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import dedent from 'dedent'
 import Home from "./pages/Home/Home"
 import Header from "./layout/Header/Header"
-// import Works from "./pages/Works/Works"
+import Works from "./pages/Works/Works"
 import { ContextMenu } from "./components"
 
 export default () => {
@@ -23,7 +23,7 @@ export default () => {
                     <main className="layout">
                         <Routes>
                             <Route path="/" element={<Home/>} /> 
-                            {/* <Route path="/works/:name" element={<Works/>} />  */}
+                            <Route path="/works/:name" element={<Works/>} /> 
                         </Routes>
                     </main>
                 <ContextMenu/>
