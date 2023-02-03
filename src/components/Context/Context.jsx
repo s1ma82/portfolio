@@ -1,0 +1,1 @@
+export default ({ tag, children }) => <div data-context={tag}  style={{cursor: "context-menu"}}>{children}</div>
