@@ -5,10 +5,10 @@ import useOutside from '../../hooks/useOutside'
 import styles from './Logo.module.scss' 
 
 export default ({ full = false, setHeaderState}) => {
-    const [state, setState] = useOutside([`.${styles.logo}`])
+    const [state, setState] = useOutside([`.${ styles.logo }`])
     const block = useRef()
     const {t} = useTranslation()
-    
+
     useEffect(() => {
         if (!block.current) return
 
@@ -36,7 +36,7 @@ export default ({ full = false, setHeaderState}) => {
             onClick={() => setState(!state)}
         >
             <Content />
-            
+
             {full && state
                 ? (
                     <Text className={`${styles.logo__descr}`} >

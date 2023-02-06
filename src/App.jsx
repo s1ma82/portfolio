@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home"
 import Header from "./layout/Header/Header"
 import Works from "./pages/Works/Works"
 import { ContextMenu } from "./components"
+import ShowCode from "./pages/ShowCode/ShowCode"
 
 export default () => {
     const log = dedent`
@@ -24,6 +25,7 @@ export default () => {
                         <Routes>
                             <Route path="/" element={<Home/>} /> 
                             <Route path="/works/:name" element={<Works/>} /> 
+                            <Route path="/showcode/:component" element={<ShowCode/>} /> 
                         </Routes>
                     </main>
                 <ContextMenu/>

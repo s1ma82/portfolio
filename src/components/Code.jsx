@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import hljs from "highlight.js/lib/core";
 import 'highlight.js/styles/monokai-sublime.css'
 
+
 const genLang = async (name, setModules) => {
     const lang = {} 
     switch (name) {
@@ -45,16 +46,16 @@ const imports = async (name, theme, setModules) => {
     
 }
 
-export default ({ handleRef = null, children = null, lang = 'js', theme = 'monokai' }) => {
+export default ({children = null, lang = 'js', theme = 'monokai' }) => {
     const [modules, setModules] = useState(false) 
     const [state, setState] = useState(`${children}`)
 
     useEffect(() => {
         imports(lang, theme, setModules)
-        if(!modules) return
+        if (!modules) return
         hljs.highlightAll()
-        console.log(state)
 
     }, [state, modules])
+    
     return <pre ><code  className="code">{state}</code></pre>
 }

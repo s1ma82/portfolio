@@ -39,6 +39,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            gap: 10px;
             cursor: pointer;
             padding: 10px;
             background: #111111;
@@ -56,9 +57,6 @@
             }
             &:hover{
                 background: #111111de;
-            }
-            &:last-child{
-                border: none;
             }
         }
         

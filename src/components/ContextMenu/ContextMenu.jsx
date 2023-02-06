@@ -4,6 +4,7 @@ import { ReactSVG } from 'react-svg';
 import funcs from './funcs'
 import useOutside from '../../hooks/useOutside'
 import styles from './ContextMenu.module.scss';
+import { Link } from 'react-router-dom';
 
 export default () => {
 	const [focus, setFocus] = useOutside(['#context-menu'])
@@ -39,7 +40,7 @@ export default () => {
 		)
 		console.log('%cContextMenu ↓', 'color: orange')
 		console.log('%cYou can use the right mouse button on some components to view the code of an element or destroy it.', 'font-style: italic')
-		setTimeout(() => alert('Turn on developer tools'), 3000) 
+		// setTimeout(() => alert('Turn on developer tools'), 3000) 
 	}, [])
 
 	useEffect(() => {
@@ -58,10 +59,16 @@ export default () => {
 			{ data ? <span className={styles.name}>[{data.getAttribute('data-context')}]</span> : null}
 			<ul className={styles.list}>
 				{data ? (<>
-					<li className={styles.item}>
-						<ReactSVG wrapper='span' className={styles.img} fill="var(--color-white)" src="/code.svg" />
-						<span className={styles.text}>Show code</span>
-					</li>
+					<Link to={`/showcode/${data?.getAttribute('data-context')}`}>
+						<li
+							className={styles.item}
+							styles={{ gap: "20px" }}
+							onClick={() => setFocus(false)}
+						>
+							<ReactSVG wrapper='span' className={styles.img} fill="var(--color-white)" src="/code.svg" />
+							<span className={styles.text}>Show code</span>
+						</li>
+					</Link>
 					<li className={styles.item} onClick={() => {
 						menuFuncs.destroy(data)
 						setFocus(false)
@@ -76,8 +83,8 @@ export default () => {
 					menuFuncs.restore()
 					setFocus(false)
 				}}>
-					<ReactSVG wrapper='span' className={styles.img} fill="var(--color-white)" src="/restore.svg" />
-					<span className={styles.text}>Восстановить всё</span>
+						<ReactSVG wrapper='span' className={styles.img} fill="var(--color-white)" src="/restore.svg" />
+						<span className={styles.text}>Восстановить всё</span>
 				</li>
 			</ul>
 		</div>
