@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { Text, Typed } from '../'
 import useOutside from '../../hooks/useOutside'
 import styles from './Logo.module.scss' 
@@ -27,16 +28,36 @@ export default ({ full = false, setHeaderState}) => {
     </>
 
 
-    return (
+    return  state ? (
+        <Link to='/'>
+            <span 
+                className={`
+                    ${styles.logo} 
+                    ${state ? styles.active : ''}
+                `}
+                onClick={() => setState(!state)}
+                title="Press doubleclick for return to home page"
+            >
+                <Content />
+                {full && state
+                    ? (
+                        <Text className={`${styles.logo__descr}`} >
+                            <Typed className={styles.typed}  text={t('logo') || ''} state={state} />
+                        </Text>  
+                    ) : null 
+                }
+            </span>
+        </Link>
+    ) : (
         <span 
             className={`
                 ${styles.logo} 
                 ${state ? styles.active : ''}
             `}
             onClick={() => setState(!state)}
+            title="Press doubleclick for return to home page"
         >
             <Content />
-            
             {full && state
                 ? (
                     <Text className={`${styles.logo__descr}`} >

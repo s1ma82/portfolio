@@ -3,8 +3,7 @@ import { Slider, Text, Title } from "../../components"
 import { works } from "../../assets/works"
 
 function getWork(name) {
-    const work = works.find(i => i.name  === name)
-    console.log(work)
+    const work = works.find(i => i.name === name)
     return work
 }
 

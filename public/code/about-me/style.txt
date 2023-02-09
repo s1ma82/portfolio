@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.skills{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: inset #00000050 0 0 10px 0px;
+
+    .title{
+        display: inline-block;
+        width: fit-content;
+        font-size: 1.5em;
+        color: var(--color-gray);
+        padding: 0;
+        padding-bottom: 2px;
+        border-bottom: solid var(--color-green) 2.5px;
+
+        &_sub{
+            position: relative;
+            border: none;
+            font-size: 1.3em;
+            &::after{
+                text-align: start;
+                position: absolute;
+                display: block;
+                bottom: 0px;
+                right: -15px;
+                content: '>';
+                color: var(--color-green);
+                opacity: .8;
+                transform: rotate(90deg);  
+            }
+        }
+    }
+    &__item{
+        display: flex;
+        row-gap: 30px;
+        column-gap: 100px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        
+        .list{
+            gap: 10px;
+            font-size: 20px;
+            font-family: 'Righteous';
+            li{
+                white-space: nowrap;
+                align-items: center;
+                width: max-content;
+                svg{
+                    height: 32px;
+                }
+            }
+        }
+
+        .techs{
+            .list{
+                list-style: upper-roman inside;
+            }
+        }
+        .libs, .sites{
+            .title{
+                margin-bottom: 5px;
+            }
+            .list{
+                height: 150px;
+                overflow-y: scroll;
+                align-content: flex-start;
+                &::-webkit-scrollbar{
+                    width: 4.5px;
+                }
+                font-size: 16px;
+                font-family: var(--font-code);
+                gap: 3px;
+            }
+        }
+        .sites{
+            .list{
+                li{
+                    height: max-content;
+                }
+            }
+            a{
+                box-sizing: content-box;
+                padding: 5px 2px;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &_soft{
+            .list{
+                align-items: flex-start;
+                flex-wrap: wrap;
+                font-family: var(--font);
+                flex-direction: row;
+            }
+        }
+    }
+}

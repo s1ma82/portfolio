@@ -14,9 +14,13 @@ export default () => {
             <Context tag="main-title">
                 <Title>{t('hello.title')}</Title>
             </Context>
-            <Text className="start">{t('hello.text')}</Text>
+            <Context tag="text">
+                <Text className="start">{t('hello.text')}</Text>
+            </Context>
             <Title>About me</Title>
-            <AboutMe className='start' />
+            <Context tag="about-me">
+                <AboutMe className='start' />
+            </Context>
             <Portfolio/>
         </div>
     )

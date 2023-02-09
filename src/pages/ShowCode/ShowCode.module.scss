@@ -1,8 +1,14 @@
 .showCode {
-    .img_container{
+    position: relative;
+    cursor: pointer;
+    .container{
+        position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
-        img{
-            width: 100%;
+        display: none;
+        &_active{
+            display: block;
         }
-    }    
+    }
 }

@@ -57,6 +57,7 @@ ul>li{
 }
 .code{
     display: flex;
+    font-weight: 700;
     font-family: var(--font-code);
 }
 

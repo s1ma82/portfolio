@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@keyframes logo {
+    0%{
+        margin-left: 0%;             
+    } 30%{
+        margin-left: 1%;            
+    } 60%{
+        margin-left: -1%;            
+    } 100%{
+        margin-left: 0%;             
+    }
+}
+.logo{
+    position: relative;
+    display: flex;
+    font-family: 'Righteous';
+    font-size: 33px;
+    color: var(--color-white);
+    font-weight: 700;
+    user-select: none;
+    height: 40px;
+    cursor: pointer;
+    word-wrap: none;
+    z-index: 100;
+
+    
+    b{
+        color: var(--color-green);
+        transition: color .3s;
+    }
+    &__descr{
+        display: none;
+        margin: 0;
+        margin-top: 8px;
+        font-family: var(--font);
+        font-size: 20px;
+        line-height: 30px;
+        z-index: 100;
+
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--color-green);
+        transition: width .1s .3s ;
+    }
+    &.active{
+        animation: logo .5s ease;
+        
+        .logo__descr{
+            display: block;
+        }
+
+    }
+    &:hover{
+        color: var(--color-green);
+        transition: .3s;
+        b{
+            color: var(--color-white);
+            transition: .3s;
+        }
+    }
+}
