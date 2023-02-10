@@ -21,7 +21,7 @@ export default () => {
 	]
 
 	return (
-		<footer className={styles.footer}>
+		<footer className={styles.footer} >
 			<div className={styles.container}>
 				<Title className={styles.title}>Contacts</Title>
 				<ul className={styles.contacts}>

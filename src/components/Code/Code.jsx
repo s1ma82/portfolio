@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import hljs from "highlight.js/lib/core";
 import 'highlight.js/styles/monokai-sublime.css'
+import styles from './Code.module.scss'
 
 
 const genLang = async (name, setModules) => {
@@ -62,5 +63,5 @@ export default ({children = null, lang = 'js', theme = 'monokai', ...props}) => 
 
     }, [state, modules])
     
-    return <pre ref={ref}><code  className="code" {...props}>{state}</code></pre>
+    return <pre ref={ref}><code  className={styles.code} {...props}>{state}</code></pre>
 }

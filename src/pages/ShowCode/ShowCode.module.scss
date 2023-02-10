@@ -1,11 +1,7 @@
 .showCode {
-    position: relative;
-    cursor: pointer;
     .container{
-        position: absolute;
-        left: 0;
-        top: 0;
         width: 100%;
+        cursor: pointer;
         display: none;
         &_active{
             display: block;
