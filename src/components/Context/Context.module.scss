@@ -1,0 +1,26 @@
+.context{
+    position: relative;
+    .help{
+        position: absolute;
+        display: flex;
+        left: 50%;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        text-transform: uppercase;
+        font-family: var(--font-code);
+        font-weight: bold;
+        background: #000000;
+        border-radius: 16px;
+        padding: 10px;
+        opacity: .8;
+        z-index: 10000;
+        transform: translate(-50%);
+        .icon{
+            transform: rotate(-90deg);
+            svg{
+                fill: var(--color-white);
+            }
+        }
+    }
+}

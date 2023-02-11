@@ -40,6 +40,12 @@ export default () => {
 		)
 		console.log('%cContextMenu ↓', 'color: orange')
 		console.log('%cYou can use the right mouse button on some components to view the code of an element or destroy it.', 'font-style: italic')
+
+		const list = document.querySelectorAll('[data-context]')
+		list.forEach(i => i.classList.add(styles.focus))
+		setTimeout(() => {
+			list.forEach(i => i.classList.remove(styles.focus))
+		}, 2000)	
 		// setTimeout(() => alert('Turn on developer tools'), 3000) 
 	}, [])
 
@@ -47,6 +53,7 @@ export default () => {
 		if(!data) return 
 		data.classList.toggle(styles.focus)
 	}, [focus])
+
 	return (
 		<div
 			id="context-menu"
