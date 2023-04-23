@@ -1,4 +1,5 @@
-import { Line, Title } from '../'
+import { Line } from '../'
+import { Title} from '@/ui'
 import { techs, sites, langs, frameworks, libs, tools, utils } from './data'
 import styles from './AboutMe.module.scss'
 export default ({className}) => {

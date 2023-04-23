@@ -1,7 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { Text, Typed } from '../'
+import { Typed } from '../'
+import {Text} from '@/ui'
 import useOutside from '../../hooks/useOutside'
 import styles from './Logo.module.scss' 
 

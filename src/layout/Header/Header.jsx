@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Logo, LangMenu, Context } from '../../components'
+import { Logo, LangMenu } from '../../components'
+import {Context} from '@/ui'
 import styles from './Header.module.scss'
 export default () => {
     const [state, setState] = useState(false)

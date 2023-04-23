@@ -1,5 +1,5 @@
 import { works } from '../../assets/works'
-import {Title, Text, Context} from '../'
+import {Title, Text, Context} from '../../ui'
 import styles from './Portfolio.module.scss'
 import { Link } from 'react-router-dom';
 export default () => {

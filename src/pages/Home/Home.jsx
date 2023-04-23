@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next"
-import {AboutMe, Canvas, Context, Portfolio, Text, Title} from "../../components"
+import { AboutMe, Canvas, Portfolio, } from "../../components"
+import {Text, Title, Context} from '@/ui'
 import styles from './Home.module.scss'
 
 

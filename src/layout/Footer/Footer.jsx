@@ -1,5 +1,5 @@
 import styles from './Footer.module.scss';
-import {Text, Title} from '../../components'
+import {Text, Title} from '@/ui'
 export default () => {
 	const socials = [
 		{

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
-import { Slider, Text, Title } from "../../components"
+import { Slider } from "../../components"
+import {Text, Title} from '@/ui'
 import { works } from "../../assets/works"
 
 function getWork(name) {

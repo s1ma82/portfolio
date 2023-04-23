@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import codeExample from '../../assets/codeExample';
-import {Code, Context} from '../../components'
+import { Code } from '../../components'
+import { Context } from '@/ui'
 import styles from './ShowCode.module.scss';
 
 export default () => {
