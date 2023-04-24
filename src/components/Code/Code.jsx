@@ -3,7 +3,9 @@ import hljs from "highlight.js/lib/core";
 import 'highlight.js/styles/monokai-sublime.css'
 import styles from './Code.module.scss'
 
-
+hljs.configure({
+    ignoreUnescapedHTML: true
+})
 const genLang = async (name, setModules) => {
     const lang = {} 
     switch (name) {

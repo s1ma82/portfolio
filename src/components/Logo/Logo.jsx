@@ -14,14 +14,12 @@ export default ({ full = false, setHeaderState}) => {
     useEffect(() => {
         if (!block.current) return
 
-        if (state) {
-            setTimeout(() => {
-                block.current.style.paddingRight = '20px'
-            }, 250)
-        } else {
-            block.current.style.paddingRight = '0'
-            setHeaderState(state)
-        }
+        setTimeout(() => {
+            state ?
+                block.current.classList.add(styles.logo_padding) :
+                block.current.classList.remove(styles.logo_padding)
+        }, 250)
+
     }, [state])
 
     const Content = () => <>

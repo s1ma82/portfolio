@@ -15,7 +15,6 @@ export default () => {
 		setText(false)
 		async function func() {
 			const code = await data.code()
-			console.log(code)
 			setText(code)
 		}
 		func()

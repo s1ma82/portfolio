@@ -25,7 +25,7 @@ export default () => {
 			<div className={styles.container}>
 				<Title className={styles.title}>Contacts</Title>
 				<ul className={styles.contacts}>
-					{socials?.map(i => <a href=""><li>{i.icon}</li></a>)}
+					{socials?.map(i => <a href={i.link} key={i.link} target="_blank" ><li>{i.icon}</li></a>)}
 				</ul>
 			</div>
 		</footer>

@@ -3,8 +3,12 @@
         width: 100%;
         cursor: pointer;
         display: none;
+
         &_active{
             display: block;
+            pre{
+                overflow: auto;
+            }
         }
     }
 }
