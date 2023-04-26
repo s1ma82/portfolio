@@ -12,6 +12,7 @@ export default ({ full = false, setHeaderState}) => {
     const {t} = useTranslation()
     
     useEffect(() => {
+        setHeaderState(state)
         if (!block.current) return
 
         setTimeout(() => {
@@ -22,32 +23,7 @@ export default ({ full = false, setHeaderState}) => {
 
     }, [state])
 
-    const Content = () => <>
-        s<b>1</b>ma<b ref={block}>82</b> 
-    </>
-
-
-    return  state ? (
-        <Link to='/'>
-            <span 
-                className={`
-                    ${styles.logo} 
-                    ${state ? styles.active : ''}
-                `}
-                onClick={() => setState(!state)}
-                title="Press doubleclick for return to home page"
-            >
-                <Content />
-                {full && state
-                    ? (
-                        <Text className={`${styles.logo__descr}`} >
-                            <Typed className={styles.typed}  text={t('logo') || ''} state={state} />
-                        </Text>  
-                    ) : null 
-                }
-            </span>
-        </Link>
-    ) : (
+    const Content = () =>
         <span 
             className={`
                 ${styles.logo} 
@@ -56,7 +32,9 @@ export default ({ full = false, setHeaderState}) => {
             onClick={() => setState(!state)}
             title="Press doubleclick for return to home page"
         >
-            <Content />
+            <>
+                s<b>1</b>ma<b ref={block}>82</b> 
+            </>
             {full && state
                 ? (
                     <Text className={`${styles.logo__descr}`} >
@@ -65,5 +43,13 @@ export default ({ full = false, setHeaderState}) => {
                 ) : null 
             }
         </span>
-    )
+
+
+    return state ?
+        <Link to='/'>
+            <Content/>  
+        </Link>
+    : 
+    
+<Content />
 }
