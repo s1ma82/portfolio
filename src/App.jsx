@@ -3,7 +3,6 @@ import dedent from 'dedent'
 import Home from "./pages/Home/Home"
 import Footer from "./layout/Footer/Footer"
 import Header from "./layout/Header/Header"
-import Works from "./pages/Works/Works"
 import { ContextMenu } from "./components"
 import ShowCode from "./pages/ShowCode/ShowCode"
 
@@ -25,7 +24,6 @@ export default () => {
                 <main className="layout">
                     <Routes>
                         <Route path="/" element={<Home/>} /> 
-                        <Route path="/works/:name" element={<Works/>} /> 
                         <Route path="/showcode/:component" element={<ShowCode/>} /> 
                     </Routes>
                 </main>
