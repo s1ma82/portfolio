@@ -49,7 +49,5 @@ export default ({ full = false, setHeaderState}) => {
         <Link to='/'>
             <Content/>  
         </Link>
-    : 
-    
-<Content />
+    : <Content />
 }

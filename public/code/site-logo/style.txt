@@ -23,7 +23,10 @@
     word-wrap: none;
     z-index: 100;
 
-    
+    &_padding{
+        padding-right: 20px;
+    }
+
     b{
         color: var(--color-green);
         transition: color .3s;
@@ -65,3 +68,4 @@
         }
     }
 }
+
