@@ -6,34 +6,18 @@ async function code() {
     data.push(await style.text())
     return data
 } 
-
-export default [
-    {
-        name: "site-logo",
-        code
-    },
-    {
-        name: "lang-menu",
-        code
-    },
-    {
-        name: "canvas",
-        code
-    },
-    {
-        name: "main-title",
-        code
-    },
-    {
-        name: "text",
-        code
-    },
-    {
-        name: "about-me",
-        code
-    },
-    {
-        name: "code-example",
-        code
-    }
+function setExample(arr) {
+    return arr.map(i => ({name: i, code: code})) 
+}
+const works = [
+    "site-logo",
+    "lang-menu",
+    "canvas",
+    "main-title",
+    "text",
+    "about-me",
+    "code-example",
+    "portfolio-work",
 ]
+
+export default setExample(works)

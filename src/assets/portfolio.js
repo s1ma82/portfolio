@@ -1,4 +1,4 @@
-export const works = [
+export const portfolio = [
     {
         name: 'Pinterest clone',
         descr: 'Some text',

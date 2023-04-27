@@ -35,7 +35,7 @@ export default () => {
 		<div className={styles.portfolio}>
 			<ul className={styles.works}>
 				{portfolio?.map((data, n) => (
-					<Context key={`works__item:${n}`} tag={`portfolio-work`}>
+					<Context key={`works__item:${n}`} tag={`portfolio-work #${n}`}>
 						<Work {...data}/>
 					</Context>
 				))}
